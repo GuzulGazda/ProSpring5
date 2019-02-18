@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+
+    
+    <bean id="oracle" name="wiseworm" class="kiv.spring.ioc.injection.xml.WormBookOracle"/>
+    
+    <bean id="injection" name="injection" class="kiv.spring.ioc.injection.xml.setter.SetterInjection" >
+        <property name="dependencyA" ref="dependencyA"/>
+        <property name="dependencyB" ref="dependencyB"/>
+    </bean>
+    
+    <bean id="f-injection" name="f-injection" class="kiv.spring.ioc.injection.xml.field.FieldInjection" >
+        <property name="dependencyA" ref="fieldDependencyA"/>
+        <property name="dependencyB" ref="fieldDependencyB"/>
+        <property name="a" ref="dependencyA"/>
+    </bean>
+    
+    <bean id="c-injection" name="c-injection" class="kiv.spring.ioc.injection.xml.constructor.ConstructorInjection" >
+        <constructor-arg value="I hope that someone gets my message in a bottle"/>
+    </bean>
+    
+    <bean id="dependencyA" class="kiv.spring.ioc.injection.xml.setter.DependencyA" scope="prototype"/>
+    <bean id="dependencyB" class="kiv.spring.ioc.injection.xml.setter.DependencyB"/>
+    <bean id="fieldDependencyA" class="kiv.spring.ioc.injection.xml.field.FieldDependencyA"/>
+    <bean id="fieldDependencyB" class="kiv.spring.ioc.injection.xml.field.FieldDependencyB"/>
+    
+</beans>

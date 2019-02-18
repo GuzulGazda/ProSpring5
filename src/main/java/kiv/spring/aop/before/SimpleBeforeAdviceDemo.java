@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package kiv.spring.aop.before;
+
+import java.lang.reflect.Method;
+import org.springframework.aop.MethodBeforeAdvice;
+import org.springframework.aop.framework.ProxyFactory;
+
+public class SimpleBeforeAdviceDemo implements MethodBeforeAdvice{
+
+    public static void main(String[] args) {
+        Guitarist johnMayer = new Guitarist();
+        ProxyFactory pf = new ProxyFactory();
+        pf.addAdvice(new SimpleBeforeAdviceDemo());
+        pf.setTarget(johnMayer);
+        Guitarist proxy = (Guitarist) pf.getProxy();
+        proxy.sing();
+    }
+
+    @Override
+    public void before(Method method, Object[] args, Object target) throws Throwable {
+        System.out.println("Before '" + method.getName() + "', tune guitar.");
+    }
+    
+}
