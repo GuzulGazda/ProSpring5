@@ -5,7 +5,7 @@
  */
 package kiv.spring.ioc.injection.method.lookup;
 
-import kiv.spring.ioc.injection.method.lookup.model.Singer;
+import kiv.spring.model.Singer;
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.util.StopWatch;
 

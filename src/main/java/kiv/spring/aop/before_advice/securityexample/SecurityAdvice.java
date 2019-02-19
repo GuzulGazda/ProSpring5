@@ -1,4 +1,4 @@
-package kiv.spring.aop.before.securityexample;
+package kiv.spring.aop.before_advice.securityexample;
 
 import java.lang.reflect.Method;
 import org.springframework.aop.MethodBeforeAdvice;

@@ -11,7 +11,7 @@ http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util.xsd">
 
     
-    <bean id="singer" class="kiv.spring.ioc.injection.method.lookup.model.Singer" scope="prototype"/>
+    <bean id="singer" class="kiv.spring.model.Guitarist" scope="prototype"/>
     <bean id="abstractLookupBean" class="kiv.spring.ioc.injection.method.lookup.AbstractLookupDemoBean" scope="prototype">
         <lookup-method name="getMySinger" bean="singer"/>
     </bean>

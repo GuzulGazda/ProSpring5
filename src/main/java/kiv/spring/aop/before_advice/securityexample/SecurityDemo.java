@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kiv.spring.aop.before.securityexample;
+package kiv.spring.aop.before_advice.securityexample;
 
 import org.springframework.aop.framework.ProxyFactory;
 

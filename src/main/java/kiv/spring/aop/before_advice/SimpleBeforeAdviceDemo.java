@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kiv.spring.aop.before;
+package kiv.spring.aop.before_advice;
 
 import java.lang.reflect.Method;
+import kiv.spring.model.Guitarist;
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 
